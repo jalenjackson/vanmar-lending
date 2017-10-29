@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a33297a5-4c5f-4322-b77b-6285c485f2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/index.html.erb" afterPath="$PROJECT_DIR$/app/views/contact/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/contact/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="602" column="39" lean-forward="false" selection-start-line="602" selection-start-column="39" selection-end-line="602" selection-end-column="39" />
+            <state relative-caret-position="298">
+              <caret line="654" column="22" lean-forward="false" selection-start-line="654" selection-start-column="22" selection-end-line="654" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
@@ -95,7 +93,7 @@
       <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="1200">
               <caret line="104" column="14" lean-forward="false" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
               <folding />
             </state>
@@ -627,12 +625,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509044227847</updated>
       <workItem from="1509044229499" duration="249000" />
-      <workItem from="1509210802438" duration="8942000" />
+      <workItem from="1509210802438" duration="9165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9191000" />
+    <option name="totallyTimeSpent" value="9414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -787,7 +785,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="1200">
           <caret line="104" column="14" lean-forward="false" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
           <folding />
         </state>
@@ -795,8 +793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="602" column="39" lean-forward="false" selection-start-line="602" selection-start-column="39" selection-end-line="602" selection-end-column="39" />
+        <state relative-caret-position="298">
+          <caret line="654" column="22" lean-forward="false" selection-start-line="654" selection-start-column="22" selection-end-line="654" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
