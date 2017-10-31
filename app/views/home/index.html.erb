@@ -3,11 +3,15 @@
     cursor: pointer;
     display: block;
     position: fixed;
-    width: 60px;
-    height: 40px;
+    width: 100px;
+    height: 70px;
     text-indent: -9999em;
     right:30px;
     top: 30px;
+    z-index: 9999999999999999;
+    background: rgba(0,0,0,0.2);
+    text-align: center !important;
+    border-radius: .2em;
   }
 
   a.menu-trigger span,
@@ -23,6 +27,7 @@
     width: 45px;
     height: 4px;
     left: 0;
+    margin: 0 auto !important;
   }
 
   a.menu-trigger span:before,
@@ -31,7 +36,8 @@
   }
 
   a.menu-trigger span {
-    top: 16px;
+    top: 32px;
+    left: 28px;
   }
 
   a.menu-trigger span:before {
@@ -82,7 +88,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
   .bg {
     width: 100%;
@@ -206,13 +211,14 @@
   }
 
     .nav {
-      position: absolute;
+      position: fixed;
       right: 100px;
       top: -10%;
       height: 300%;
       transform: rotate(30deg);
       background: rgb(76,125,21);
       width: 0;
+      z-index: 99999999999999999999;
       opacity: 0;
       transition: all 300ms ease-in-out;
       white-space: nowrap;
@@ -267,7 +273,342 @@
     }
 
 
+    .second-panel {
+      width: 100%;
+      height: 100%;
+      background: white;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .right-curve {
+      position: absolute;
+      right: -20%;
+      top: -150px;
+      width: 60%;
+      height: 150%;
+      background: url(http://4.bp.blogspot.com/-DOtkaaLe6S4/U3d9BxqDI6I/AAAAAAAAH1w/H9-dYvBj_9o/s1600/Sweet-Home-Wallpapers-Wallpapers-Home-1.jpg) center center no-repeat;
+      background-size: cover;
+    }
+
+  .panel {
+    position: relative;
+
+  }
+  .stripe {
+    width: 100%;
+    background-color: rgb(51,51,51);
+    height: 900px;
+    position: absolute;
+    right: -40% ;
+    transform: skew(-15deg) rotate(-55deg);
+    box-shadow: 1px 3px 30px rgba(0,0,0,0.4);
+    overflow: hidden;
+  }
+
+
+
+  .panel.light .stripe {
+  }
+
+    .second-panel-content {
+      position: absolute;
+      width: 450px;
+      margin-left: 100px;
+      margin-top: 150px;
+      text-align: left;
+    }
+
+    .second-panel-content h1 {
+      font-family: "Open Sans",sans-serif;
+      text-transform: uppercase;
+      color: #4c7d15;
+
+    }
+
+    .second-panel-content p {
+      font-family: "Open Sans",sans-serif;
+    }
+
+
+
+  @media only screen and (max-width: 900px) {
+    .stripe {
+      width: 100%;
+     left: 0;
+      top: 200px !important;
+      overflow: hidden;
+      background-color: #985151;
+      height: 300px !important;
+      transform: skew(0deg) rotate(0deg);
+      position: relative !important;
+    }
+
+    .mobile-change h1  {
+      color: #4c7d15 !important;
+    }
+
+    .mobile-change p {
+      color: black !important;
+    }
+
+    .second-panel {
+      background: white !important;
+      height: 400px !important;
+    }
+
+    .second-panel h1 {
+      margin: 0 !important;
+    }
+
+    .panel2  {
+      margin:  0 !important;
+      display: block !important;
+      text-align: center !important;
+      width: 100% !important;
+      left: 0 !important;
+
+    }
+    .panel2 {
+      position: relative !important;
+      text-align: left !important;
+    }
+
+    .panel2 h1 {
+      text-align: center !important;
+    }
+
+    .stripe2 {
+      display: none !important;
+    }
+
+    .panel2 button {
+      display: block !important;
+      margin: 0 auto !important;
+      margin-top: 20px !important;
+    }
+
+    .stripe {
+      display: none !important;
+    }
+
+    .stripe2 {
+      position: relative !important;
+      transform: skew(0deg) rotate(0deg) !important;
+    }
+
+    .stripe img {
+      transform: skew(0deg) rotate(0deg) scale(1);
+      height: 100px;
+      width: 100px;
+      display: none;
+    }
+
+
+
+    .second-panel-content {
+      margin-left: 0px;
+      margin-top: 0px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .second-panel-content p {
+      width: 400px;
+      display: block;
+      margin:0 auto;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 1000px){
+
+    .quick-links {
+      width: 100% !important;
+      position: relative !important;
+      left: 0 !important;
+      margin-top: 20px !important;
+      transform: translateY(50px) !important;
+    }
+
+    .second-panel-content {
+      height: auto !important;
+    }
+
+    .side1-mobile {
+
+      transform: translateY(50px);
+    }
+    .side1 {
+      position: relative !important;
+      width: 100% !important;
+    }
+
+    .footer2 {
+      height: auto !important;
+    }
+    .side1 h1, .side1 p , .side1 h2 {
+      margin: 0 !important;
+      margin-top: 0px !important;
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+      width: 400px !important;
+
+    }
+
+
+    .side1 h1 {
+      font-size: 25px !important;
+      width: 300px !important;
+    }
+
+    .side1 p {
+      font-size: 12px !important;
+      width: 300px !important;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    .second-panel-content {
+      margin-left: 0px;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .second-panel-content h1 {
+      font-size: 20px;
+    }
+
+    .second-panel-content p {
+      width: 300px;
+    }
+
+  }
+
+  @media only screen and (max-width: 350px) {
+
+  }
+
+    .second-panel-content button {
+      text-transform: uppercase;
+      background: rgb(70,70,110);
+      color: white;
+      border: none;
+      height: 50px;
+      width: 220px;
+      font-size: 11px;
+      border-radius: .4em;
+      margin-top: 30px;
+    }
+
+    .stripe2 {
+      left: -40%;
+      transform: skew(15deg) rotate(55deg);
+    }
+
+    .stripe2 img {
+      transform: skew(-15deg) rotate(-55deg) scale(1.4);
+
+    }
+
+    .panel2 {
+      position: absolute;
+      right: 70px;
+      width: 450px;
+      margin-left: 100px;
+      margin-top: 150px;
+      text-align: right;
+    }
+
+
+    .footer2 {
+      width: 100%;
+      height: 100%;
+      background: url(../green-bg.png);
+      position: relative;
+    }
+
+
+    .side1 {
+      width: 60%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+
+    .side2 {
+      width:40%;
+      height: 100%;
+      position: absolute;
+      right:0;
+      top: 0;
+    }
+
+
+    .quick-links {
+      width: 300px;
+      height: 80vh;
+      margin-top: 50px;
+      border-radius: .1em;
+      background: rgba(255,255,255,0.2);
+      text-align: center;
+      position: absolute;
+      right: 150px;
+    }
+
+    .quick-links h1 {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 50px;
+    }
+
+  .quick-links button {
+    text-transform: uppercase;
+    background: rgb(70,70,110);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 220px;
+    font-size: 11px;
+    border-radius: .4em;
+  }
+    .move-down {
+      margin-top: 50px;
+    }
+
+    .side1 h1 {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      margin-left: 60px;
+      width: 500px;
+      margin-top: 100px;
+      font-weight: 500;
+
+
+    }
+
+    .side1 p {
+      margin-left: 60px;
+      width: 500px;
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .side1 h2 {
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+      font-weight: 400;
+      margin-left: 60px;
+    }
 
 </style>
 
@@ -279,9 +620,99 @@
   </div>
 
   <%= render 'partials/nav' %>
-
-
 </div>
+
+<div class="second-panel">
+  <div class="second-panel-content">
+    <h1>First-Time Homeowner?</h1>
+    <p>If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <button>create an affordable plan</button>
+  </div>
+
+  <div class="panel light">
+    <div class="stripe ">
+    </div>
+  </div>
+</div>
+
+
+<div  style="background: url(../blue-bg.png) center center no-repeat; background-size: cover;" class="second-panel">
+  <div class="second-panel-content panel2">
+    <h1 style="color:white;">First-Time Homeowner?</h1>
+    <p style="color: white">If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <button>create an affordable plan</button>
+  </div>
+
+  <div  class="panel light">
+    <div class="stripe stripe2 ">
+    </div>
+  </div>
+</div>
+
+
+<div style="background: url(../green-bg.png) center center no-repeat; background-size: cover;" class="second-panel">
+  <div class="second-panel-content mobile-change">
+    <h1 style="color: white">First-Time Homeowner?</h1>
+    <p style="color: white">If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <button>create an affordable plan</button>
+  </div>
+
+  <div class="panel light">
+    <div class="stripe ">
+    </div>
+  </div>
+</div>
+
+
+<div  class="second-panel">
+  <div class="second-panel-content panel2">
+    <h1>First-Time Homeowner?</h1>
+    <p>If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <button>create an affordable plan</button>
+  </div>
+
+  <div class="panel light">
+    <div class="stripe stripe2 ">
+    </div>
+  </div>
+</div>
+
+<div class="footer2">
+
+  <div class="side1">
+    <div class="side1-mobile">
+      <h1>Get peace of mind with exceptional loan options</h1>
+      <p>Becoming a homeowner can be exciting and stressful at the same time.
+        Take advantage of industry knowledge that will put your fears to rest.
+        Iur team will find solutions tonyour lending needs no matter how unique your situation is.</p>
+
+
+      <h2>Contact us</h2>
+
+      <p>39249 Leopard St. Ste A
+        Palm Desert, CA 92211
+      </p>
+
+      <p>Phone: 760-200-4620</p>
+
+      <p >Fax: 760-200-0046</p>
+    </div>
+
+
+  </div>
+    <div class="quick-links">
+      <div style="transform: translateY(40px);" class="move-down">
+        <h1 style="margin-top: 50px;">First Time Home Owner</h1>
+        <button>Create An Affordable Plan</button>
+        <h1>First Time Home Owner</h1>
+        <button>Create An Affordable Plan</button>
+        <h1>First Time Home Owner</h1>
+        <button>Create An Affordable Plan</button>
+      </div>
+    </div>
+</div>
+
+
 <%= render 'partials/footer' %>
 
 
