@@ -1,0 +1,876 @@
+<style>
+  a.menu-trigger {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    width: 100px;
+    height: 70px;
+    text-indent: -9999em;
+    right:30px;
+    top: 30px;
+    z-index: 9999999999999999;
+    background: rgba(0,0,0,0.2);
+    text-align: center !important;
+    border-radius: .2em;
+  }
+
+  a.menu-trigger span,
+  a.menu-trigger span:before,
+  a.menu-trigger span:after {
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    background-color: white;
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    left: 0;
+    margin: 0 auto !important;
+  }
+
+  a.menu-trigger span:before,
+  a.menu-trigger span:after {
+    content: "";
+  }
+
+  a.menu-trigger span {
+    top: 32px;
+    left: 28px;
+  }
+
+  a.menu-trigger span:before {
+    -moz-transform-origin: 33% 100%;
+    -ms-transform-origin: 33% 100%;
+    -webkit-transform-origin: 33% 100%;
+    transform-origin: 33% 100%;
+    top: -16px;
+    z-index: 10;
+  }
+
+  a.menu-trigger span:after {
+    -moz-transform-origin: 33% 0;
+    -ms-transform-origin: 33% 0;
+    -webkit-transform-origin: 33% 0;
+    transform-origin: 33% 0;
+    top: 16px;
+  }
+
+  a.menu-trigger.active span,
+  a.menu-trigger.active span:before,
+  a.menu-trigger.active span:after {
+    background-color: transparent;
+  }
+
+  a.menu-trigger.active span:before {
+    -moz-transform: translateY(8px) translateX(1px) rotate(45deg);
+    -ms-transform: translateY(8px) translateX(1px) rotate(45deg);
+    -webkit-transform: translateY(8px) translateX(1px) rotate(45deg);
+    transform: translateY(8px) translateX(1px) rotate(45deg);
+    background-color: white;
+  }
+
+  a.menu-trigger.active span:after {
+    -moz-transform: translateY(-8px) translateX(1px) rotate(-45deg);
+    -ms-transform: translateY(-8px) translateX(1px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) translateX(1px) rotate(-45deg);
+    transform: translateY(-8px) translateX(1px) rotate(-45deg);
+    background-color: white;
+  }
+
+
+
+  html,body {
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: url(../bg.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.4);
+
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+
+    /*this to solve "the content will not be cut when the window is smaller than the content": */
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+    text-align: center;
+  }
+
+  .content img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    transform: translateY(20px);
+  }
+
+
+  .content h1 {
+    background: rgb(0,20,0);
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+    width: 550px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+
+  }
+
+  .content button {
+    width: 250px;
+    height: 50px;
+    background: #4c7d15;
+    border: none;
+    color: white;
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 900px) {
+
+
+  }
+
+
+  @media only screen and (max-width: 800px){
+    .content {
+      width:  90% !important;
+      overflow: hidden;
+    }
+
+    .content h1 {
+      font-size: 20px;
+      text-align: left;
+      width: 100%;
+      text-align: center;
+
+
+    }
+
+    a.menu-trigger {
+      left: 30px !important;
+    }
+
+  }
+
+  @media only screen and (max-width: 400px) {
+
+
+  }
+
+  @media only screen and (max-width: 350px) {
+
+  }
+
+
+
+
+  .second-panel {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .right-curve {
+    position: absolute;
+    right: -20%;
+    top: -150px;
+    width: 60%;
+    height: 150%;
+    background: url(http://4.bp.blogspot.com/-DOtkaaLe6S4/U3d9BxqDI6I/AAAAAAAAH1w/H9-dYvBj_9o/s1600/Sweet-Home-Wallpapers-Wallpapers-Home-1.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .panel {
+    position: relative;
+
+  }
+  .stripe {
+    width: 100%;
+    background-color: rgb(51,51,51);
+    height: 900px;
+    position: absolute;
+    right: -40% ;
+    transform: skew(-15deg) rotate(-55deg);
+    box-shadow: 1px 3px 30px rgba(0,0,0,0.4);
+    overflow: hidden;
+  }
+
+
+
+  .panel.light .stripe {
+  }
+
+  .second-panel-content {
+    position: absolute;
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 150px;
+    text-align: left;
+  }
+
+  .second-panel-content h1 {
+    font-family: "Open Sans",sans-serif;
+    text-transform: uppercase;
+    color: #4c7d15;
+
+  }
+
+  .second-panel-content p {
+    font-family: "Open Sans",sans-serif;
+  }
+
+
+
+  @media only screen and (max-width: 900px) {
+    .stripe {
+      width: 100%;
+      left: 0;
+      top: 200px !important;
+      overflow: hidden;
+      background-color: #985151;
+      height: 300px !important;
+      transform: skew(0deg) rotate(0deg);
+      position: relative !important;
+    }
+
+    .mobile-change h1  {
+      color: #4c7d15 !important;
+    }
+
+    .mobile-change p {
+      color: black !important;
+    }
+
+    .second-panel {
+      background: white !important;
+      height: 400px !important;
+    }
+
+    .second-panel h1 {
+      margin: 0 !important;
+    }
+
+    .panel2  {
+      margin:  0 !important;
+      display: block !important;
+      text-align: center !important;
+      width: 100% !important;
+      left: 0 !important;
+
+    }
+    .panel2 {
+      position: relative !important;
+      text-align: left !important;
+    }
+
+    .panel2 h1 {
+      text-align: center !important;
+    }
+
+    .stripe2 {
+      display: none !important;
+    }
+
+    .panel2 button {
+      display: block !important;
+      margin: 0 auto !important;
+      margin-top: 20px !important;
+    }
+
+    .stripe {
+      display: none !important;
+    }
+
+    .stripe2 {
+      position: relative !important;
+      transform: skew(0deg) rotate(0deg) !important;
+    }
+
+    .stripe img {
+      transform: skew(0deg) rotate(0deg) scale(1);
+      height: 100px;
+      width: 100px;
+      display: none;
+    }
+
+
+
+    .second-panel-content {
+      margin-left: 0px;
+      margin-top: 0px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .second-panel-content p {
+      width: 400px;
+      display: block;
+      margin:0 auto;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 1000px){
+
+    .quick-links {
+      width: 100% !important;
+      position: relative !important;
+      left: 0 !important;
+      margin-top: 20px !important;
+      transform: translateY(50px) !important;
+    }
+
+
+    .footer{
+      left: 10px !important;
+    }
+    .footer h1 {
+      float: left !important;
+    }
+
+
+
+
+    .panels {
+      position: relative !important;
+      display: block !important;
+      width: 100% !important;
+      height: 500px !important;
+      left: 0 !important;
+      margin: 0 !important;
+    }
+
+
+
+    .footer-text {
+
+      margin-top: 50px !important;
+    }
+
+    .footer-text h1 {
+      font-size: 20px !important;
+    }
+
+    .left-footer-side{
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    .right-footer-side {
+      margin-top: -50px !important;
+    }
+
+
+
+    .footer-text p {
+      font-size: 12px !important;
+      width: 250px !important;
+    }
+
+    .mobile-box {
+      bottom: 50px !important;
+    }
+
+    .box h1 {
+      margin-top: 60px !important;
+    }
+
+    .panels-container h1 {
+      display: block;
+      margin: 0 auto;
+      width: 100% !important;
+    }
+
+    .panels-container {
+      height: 100px !important;
+      overflow: visible !important;
+    }
+
+    .panels-container {
+      height: auto !important;
+    }
+
+    .both-footer {
+      margin-top: 320px !important;
+    }
+
+    .footer2 {
+      height: auto !important;
+      margin-top: -100px !important;
+    }
+
+    .both-footer {
+      position: relative !important;
+    }
+    .footer-text {
+      position: relative !important;
+    }
+
+    .both-footer {
+      margin-top: 120px !important;
+    }
+
+    .second-panel-content {
+      height: auto !important;
+    }
+
+    .side1-mobile {
+
+      transform: translateY(50px);
+    }
+    .side1 {
+      position: relative !important;
+      width: 100% !important;
+    }
+
+
+    .side1 h1, .side1 p , .side1 h2 {
+      margin: 0 !important;
+      margin-top: 0px !important;
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+      width: 400px !important;
+
+    }
+
+
+    .side1 h1 {
+      font-size: 25px !important;
+      width: 300px !important;
+    }
+
+    .side1 p {
+      font-size: 12px !important;
+      width: 300px !important;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    .second-panel-content {
+      margin-left: 0px;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .second-panel-content h1 {
+      font-size: 20px;
+    }
+
+    .second-panel-content p {
+      width: 300px;
+    }
+
+  }
+
+  @media only screen and (max-width: 350px) {
+
+  }
+
+  .second-panel-content button {
+    text-transform: uppercase;
+    background: rgb(70,70,110);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 220px;
+    font-size: 11px;
+    border-radius: .4em;
+    margin-top: 30px;
+  }
+
+  .stripe2 {
+    left: -40%;
+    transform: skew(15deg) rotate(55deg);
+  }
+
+  .stripe2 img {
+    transform: skew(-15deg) rotate(-55deg) scale(1.4);
+
+  }
+
+  .panel2 {
+    position: absolute;
+    right: 70px;
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 150px;
+    text-align: right;
+  }
+
+
+
+
+  .second-panel {
+  }
+
+  .panels {
+    width: 25%;
+    height: 102%;
+    background: red;
+    display:inline-block;
+    margin: -2px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+
+  .box {
+    position: absolute;
+    bottom: 100px;
+    width: 80%;
+    height: 200px;
+    background: rgba(0,80,0,0.8);
+    display: block;
+    margin:  0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .box button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(60,60,100);
+    left: 0;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+
+  .box h1 {
+    font-family: "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .loan-options {
+    color: white;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 60px;
+  }
+
+  .panel-message {
+    position: absolute;
+    top: 100px;
+    left:0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0,0,0,0);
+    z-index: 99;
+    text-align: center;
+    font-family: "Helvetica Neue",sans-serif;
+  }
+
+  .panel-message h1 {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: .1em;
+  }
+
+
+
+
+
+
+  .footer2 {
+    width: 100%;
+    height: 100%;
+    background: url(../green-bg.png);
+    position: relative;
+    text-align: center;
+  }
+
+  .footer2-text h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .footer2-text p {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    line-height: 25px;
+  }
+
+
+  .contact-left-side {
+    float: left;
+    text-align: left;
+    margin-left:50px ;
+
+  }
+
+  .contact-right-side input {
+    display: block;
+    width: 200px;
+    background: none;
+    border: 1px solid white;
+    height: 50px;
+  }
+
+  .contact-right-side textarea {
+    height: 300px !important;
+  }
+
+  ::-webkit-input-placeholder {
+    color: white;
+  }
+
+  .contact-right-side{
+    text-align: left;
+
+  }
+
+  .contact-right-side button {
+    color: white;
+    background: rgb(40,40,100);
+    border: none;
+    width: 150px;
+    height: 60px;
+  }
+
+
+  .both-footer {
+    position: absolute;
+    margin-top: 250px;
+    width: 100%;
+  }
+
+  .left-footer-side {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    transform: translateY(-100px);
+    text-align: left;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  }
+
+  .left-footer-side h1 {
+
+  }
+
+  .right-footer-side {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    text-align: left;
+
+  }
+
+  .footer-text h1 {
+    margin-top: 20px !important;
+  }
+
+  .right-footer-side button {
+    width: 150px;
+    height: 40px;
+    background: rgb(50,50,100);
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+
+
+  .footer-text {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-text h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    color: white;
+    margin-top: 100px;
+  }
+
+  .footer-text p {
+    width: 450px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    display: block;
+    margin:0 auto;
+    line-height: 25px;
+
+  }
+
+  .both-footer {
+  }
+
+  .right-footer-side input, textarea {
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: 1px solid white;
+    margin-top: 5px;
+    padding-left: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  }
+
+  textarea {
+    height: 100px !important;
+  }
+
+  .nav-logo {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    width:90px;
+    height: 90px;
+    z-index: 9999999999999999999999;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+  }
+
+</style>
+
+
+<img class="nav-logo" src="https://pbs.twimg.com/profile_images/448705171556548608/iVtYqy90_400x400.jpeg"/>
+
+<%= render 'partials/nav' %>
+
+<div  style="background: url(../green-bg.png) center center no-repeat;" class="second-panel">
+  <div  class="second-panel-content">
+    <h1 style="color: white">Kristen Martinez</h1>
+    <p style="color: white">Kristen Martinez has been involved in the mortgage industry for over ten years. After earning her BA degree from Colorado State she began a career in sales which soon led to the mortgage industry. After becmouing a top producer for a lending agency she decded she wanted to "guide her own ship". She opened her first mortgage cmpany in 2006 and has since established two more real estate corporations where she now serves as President</p>
+    <button>Contact Kristen</button>
+  </div>
+
+  <div class="panel light">
+    <div class="stripe ">
+    </div>
+  </div>
+</div>
+
+
+<div class="second-panel">
+  <div class="second-panel-content panel2 mobile-change">
+    <h1>Yadira Jester</h1>
+    <p>Yadira Jester our Operations Manager got her start in the mortgage industry in 2006, she now has 7 plus years of experience in several different positions in the lending business. Her areas of expertise include Federal Housing Administration (FHA), VA and Conventional financing. Her extensive knowledge of the home buying process benefits her clients by always providing for a smooth transaction</p>
+    <button>Contact Yadira</button>
+  </div>
+
+  <div  class="panel light">
+    <div class="stripe stripe2 ">
+    </div>
+  </div>
+</div>
+
+
+<div style="background: url(../blue-bg.png) center center no-repeat; background-size: cover;" class="second-panel">
+  <div class="second-panel-content mobile-change">
+    <h1 style="color: white; font-size: 28px;">Kayla Bandel</h1>
+    <p style="color: white">Kayla Bandel is our team's newest member and is a fresh face to the mortgage industry. Here at Vanmar Lending she acts as our Customer Service Rep as well as Jr. Processor, assisting all parties to help to ensure that processes run as seamless as possible. She is eager to learn all she can about the mortgage industry and is dedicated to career advancement.</p>
+    <button>Apply for your loan today</button>
+  </div>
+
+  <div class="panel light">
+    <div class="stripe ">
+    </div>
+  </div>
+</div>
+
+
+
+
+<%= render 'partials/footer' %>
+
+<script>
+    $(".menu-trigger").click(function () {
+        $(".nav3").css({
+            width: "300px",
+            opacity: "1"
+        });
+
+        $(".menu-trigger").css({
+            opacity: "0"
+        })
+    });
+
+    $(".x").click(function () {
+        $(".nav3").css({
+            width: "0px",
+            opacity: "0"
+        });
+        $(".menu-trigger").css({
+            opacity: "1"
+        })
+    });
+
+    $(window).on("load", function () {
+
+        $(".nav-logo").css({
+            opacity: "1"
+        });
+
+    });
+</script>

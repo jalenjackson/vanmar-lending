@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get '/contact' => 'contact#index'
 
-
+  get '/team' => 'team#index'
 end
