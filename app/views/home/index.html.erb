@@ -212,11 +212,10 @@
 
     .nav {
       position: fixed;
-      right: 100px;
-      top: -10%;
-      height: 300%;
-      transform: rotate(30deg);
-      background: rgb(76,125,21);
+      right: 0px !important;
+      top: 0% !important;
+      height: 100% !important;
+      background: rgba(76,125,21, 0.5);
       width: 0;
       z-index: 99999999999999999999;
       opacity: 0;
@@ -225,27 +224,15 @@
     }
 
 
-
-    .nav2 {
-      right: 190px;
-      background: rgba(76,125,21,0.5);
-    }
-
     .info {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transform: rotate(-30deg) !important;
-      left: 220px;
 
+      transform: rotate(0deg) !important;
+      background: red !important;
     }
 
     .info ul {
-      float: right;
       display: block;
       list-style-type: none;
-      margin-top: 130px;
-
     }
 
     .info ul li {
@@ -253,7 +240,6 @@
       font-family: "Arial Black",sans-serif;
       font-weight: bold;
       margin-top: 15px;
-      margin-right: 70px;
       font-size: 16px;
       text-align: right;
       text-transform: uppercase;
@@ -270,6 +256,9 @@
 
     .x {
       cursor: pointer;
+      position: absolute !important;
+      top: 50px !important;
+      left: 30px !important;
     }
 
 
@@ -976,9 +965,13 @@
 <script>
   $(".menu-trigger").click(function () {
       $(".nav").css({
-          width: "500px",
+          width: "300px",
           opacity: "1"
       });
+
+      $(".menu-trigger").css({
+          opacity: "0"
+      })
   });
 
   $(".x").click(function () {
@@ -986,5 +979,8 @@
           width: "0px",
           opacity: "0"
       });
+      $(".menu-trigger").css({
+          opacity: "1"
+      })
   });
 </script>

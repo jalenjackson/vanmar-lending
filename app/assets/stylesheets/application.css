@@ -26,6 +26,7 @@ a.menu-trigger {
     text-indent: -9999em;
     right:30px;
     top: 30px;
+    transition: all 300ms ease-in-out;
 }
 
 a.menu-trigger span,
@@ -94,14 +95,7 @@ a.menu-trigger.active span:after {
 
 
 
-.info {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-30deg) !important;
-    left: 220px;
 
-}
 
 .info ul {
     float: right;
@@ -169,26 +163,7 @@ a.menu-trigger.active span:after {
 
 
 
-.navi {
-    position: fixed;
-    right: 100px;
-    top: -10%;
-    height: 300%;
-    transform: rotate(30deg);
-    background: rgb(76,125,21);
-    width: 0px;
-    opacity: 0;
-    z-index: 99999999999999999999999999;
-    transition: all 300ms ease-in-out;
-    white-space: nowrap;
-}
 
-
-
-.nav2 {
-    right: 190px;
-    background: rgba(76,125,21,0.5);
-}
 
 
 .footer {
