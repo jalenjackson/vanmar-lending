@@ -361,6 +361,14 @@
     }
 
 
+    .footer{
+      left: 10px !important;
+    }
+    .footer h1 {
+      float: left !important;
+    }
+
+
 
 
     .panels {
@@ -769,7 +777,24 @@
       height: 100px !important;
     }
 
+    .nav-logo {
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+      width:90px;
+      height: 90px;
+      z-index: 9999999999999999999999;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
+
 </style>
+
+
+<img class="nav-logo" src="https://pbs.twimg.com/profile_images/448705171556548608/iVtYqy90_400x400.jpeg"/>
 
 <div class="bg">
   <div class="content">
@@ -797,9 +822,9 @@
 
 <div  style="background: url(../blue-bg.png) center center no-repeat;" class="second-panel">
   <div class="second-panel-content panel2 mobile-change">
-    <h1 style="color:white;">First-Time Homeowner?</h1>
-    <p style="color: white">If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
-    <button>create an affordable plan</button>
+    <h1 style="color:white; width: 100%; font-size: 30px;">Understand Your Rights</h1>
+    <p style="color: white">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
+    <button>Contact Us With Your Questions</button>
   </div>
 
   <div  class="panel light">
@@ -811,9 +836,9 @@
 
 <div style="background: url(../green-bg.png) center center no-repeat; background-size: cover;" class="second-panel">
   <div class="second-panel-content mobile-change">
-    <h1 style="color: white">First-Time Homeowner?</h1>
-    <p style="color: white">If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
-    <button>create an affordable plan</button>
+    <h1 style="color: white; font-size: 28px;">Down Payment Insurance</h1>
+    <p style="color: white">Depending on the type of loan you are applying for, it could mean a down payment of up to 20%. Ask our staff today about our down payment assistance program.</p>
+    <button>Apply for your loan today</button>
   </div>
 
   <div class="panel light">
@@ -825,8 +850,8 @@
 
 <div  class="second-panel">
   <div class="second-panel-content panel2">
-    <h1>First-Time Homeowner?</h1>
-    <p>If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <h1>15+ Years Experience</h1>
+    <p>Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
     <button>create an affordable plan</button>
   </div>
 
@@ -921,5 +946,21 @@
       $(".menu-trigger").css({
           opacity: "1"
       })
+  });
+
+  $(window).on("load", function () {
+
+     $(window).on("scroll", function() {
+          if($(document).scrollTop() > 10){
+            $(".nav-logo").css({
+                opacity: "1"
+            })
+          } else {
+              $(".nav-logo").css({
+                  opacity: "0"
+              })
+          }
+      });
+
   });
 </script>
