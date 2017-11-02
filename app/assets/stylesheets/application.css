@@ -26,7 +26,6 @@ a.menu-trigger {
     text-indent: -9999em;
     right:30px;
     top: 30px;
-    transition: all 300ms ease-in-out;
 }
 
 a.menu-trigger span,
@@ -97,40 +96,6 @@ a.menu-trigger.active span:after {
 
 
 
-.info ul {
-    float: right;
-    display: block;
-    list-style-type: none;
-    margin-top: 130px;
-
-}
-
-.info ul li {
-    color: white;
-    font-family: "Arial Black",sans-serif;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-right: 40px !important;
-    font-size: 16px;
-    text-align: right;
-    display: block;
-    text-transform: uppercase;
-}
-
-.info img {
-    width: 40px;
-    height: 40px;
-    filter: invert(100%);
-    position: absolute;
-    left: 440px;
-    top: 20px;
-}
-
-.x {
-    cursor: pointer;
-}
-
-
 @media only screen and (max-width: 800px) {
     .content {
         width: 90% !important;
@@ -149,21 +114,30 @@ a.menu-trigger.active span:after {
         left: 30px !important;
     }
 
-    .info ul {
-
-        margin-right: -30px !important;
-    }
-
-    .info ul li {
-
-        font-size: 13px !important;
-
-    }
 }
 
 
 
+.navi {
+    position: fixed;
+    right: 100px;
+    top: -10%;
+    height: 300%;
+    transform: rotate(30deg);
+    background: rgb(76,125,21);
+    width: 0px;
+    opacity: 0;
+    z-index: 99999999999999999999999999;
+    transition: all 300ms ease-in-out;
+    white-space: nowrap;
+}
 
+
+
+.nav2 {
+    right: 190px;
+    background: rgba(76,125,21,0.5);
+}
 
 
 .footer {
@@ -179,4 +153,62 @@ a.menu-trigger.active span:after {
     color: white;
     font-family: Helvetica,sans-serif;
     font-weight: 100;
+}
+
+
+
+
+.nav3 {
+    position: fixed;
+    right: 0px !important;
+    top: 0% !important;
+    height: 100% !important;
+    background: rgba(76,125,21, 0.5);
+    width: 0;
+    z-index: 99999999999999999999;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    white-space: nowrap;
+}
+
+
+.info {
+
+    transform: rotate(0deg) !important;
+}
+
+.info ul {
+    display: block;
+    list-style-type: none;
+    margin-right: 50px;
+    margin-top: 150px;
+}
+
+.info ul li {
+    color: white;
+    font-family: "Arial Black",sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
+    display: block;
+
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.info img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+    position: absolute;
+    left: 440px;
+    top: 20px;
+}
+
+.x {
+    cursor: pointer;
+    position: absolute !important;
+    top: -90px !important;
+    left: 30px !important;
+
 }

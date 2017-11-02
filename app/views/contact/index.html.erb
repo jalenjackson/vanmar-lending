@@ -674,6 +674,9 @@
     }
 
 
+
+
+
 </style>
 
 
@@ -681,27 +684,10 @@
 
 
 
-  <a class='menu-trigger'>
-    <span>Menu</span>
-  </a>
+  <%= render 'partials/nav' %>
 
 
-  <div class="navi">
-  </div>
-  <div class="navi nav2">
-    <div class="info">
-      <img class="x" src="https://png.icons8.com/xbox-x/ios7/1600"/>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Loan Application</li>
-        <li>Loan Options</li>
-        <li>Video Gallery</li>
-        <li>Our Team</li>
-        <li style="cursor: pointer;" onclick="window.location.href='/contact'">Contact Us</li>
-      </ul>
-    </div>
-  </div>
+
 
 
 
@@ -765,17 +751,24 @@
 
 <script>
     $(".menu-trigger").click(function () {
-        $(".navi").css({
-            width: "500px",
+        $(".nav3").css({
+            width: "300px",
             opacity: "1"
         });
+
+        $(".menu-trigger").css({
+            opacity: "0"
+        })
     });
 
     $(".x").click(function () {
-        $(".navi").css({
+        $(".nav3").css({
             width: "0px",
             opacity: "0"
         });
+        $(".menu-trigger").css({
+            opacity: "1"
+        })
     });
 </script>
 
