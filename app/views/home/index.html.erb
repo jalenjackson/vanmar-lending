@@ -92,14 +92,17 @@
   .bg {
     width: 100%;
     height: 100%;
-    background: url(../bg.jpg) center center no-repeat;
+    background: red !important;
     background-size: cover;
+    margin: 0;
+    overflow: hidden;
   }
 
   .content {
     width: 600px;
     height: 400px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 2px 5px 1px rgba(5, 5, 5, 0.4);
 
     position:absolute; /*it can be fixed too*/
     left:0; right:0;
@@ -109,13 +112,14 @@
     /*this to solve "the content will not be cut when the window is smaller than the content": */
     max-width:100%;
     max-height:100%;
-    overflow:auto;
+    overflow: hidden;
     text-align: center;
+
   }
 
     .content img {
-      width: 90px;
-      height: 90px;
+      width: auto;
+      height: 120px;
       display: block;
       margin: 0 auto;
       margin-top: 30px;
@@ -124,10 +128,9 @@
 
 
     .content h1 {
-      background: rgb(0,20,0);
       font-family: "Arial Black", sans-serif;
       text-transform: uppercase;
-      color: white;
+      color: rgb(41,41,41);
       font-size: 30px;
       font-weight: bold;
 
@@ -137,7 +140,13 @@
       margin: 0 auto;
       margin-top: 50px;
       padding-bottom: 5px;
+      opacity: 0;
       padding-top: 5px;
+      z-index: 9999999999;
+
+      transform: translateY(30px);
+
+      animation: move-up 300ms ease-in-out forwards 1 300ms;
 
 
     }
@@ -148,10 +157,24 @@
       background: #4c7d15;
       border: none;
       color: white;
-      font-family: "Arial Black", sans-serif;
+      opacity: 0;
+      font-family:"Helvetica Neue",sans-serif;
       text-transform: uppercase;
       font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
       margin-top: 30px;
+      cursor: pointer;
+      transform: translateY(30px);
+
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      transition: all 400ms ease-in-out;
+      animation: move-up 300ms ease-in-out forwards 1 600ms;
+
+    }
+
+    .content button:hover {
+      box-shadow: 5px 7px 7px 0 rgba(0,0,0,.26);
     }
 
 
@@ -250,7 +273,7 @@
     .second-panel-content h1 {
       font-family: "Open Sans",sans-serif;
       text-transform: uppercase;
-      color: #4c7d15;
+      color: black;
 
     }
 
@@ -511,14 +534,20 @@
 
     .second-panel-content button {
       text-transform: uppercase;
-      background: rgb(70,70,110);
       color: white;
       border: none;
+      font-weight: bold;
       height: 50px;
-      width: 220px;
+      width: 250px;
       font-size: 11px;
-      border-radius: .4em;
+      border-radius: .1em;
       margin-top: 30px;
+      cursor: pointer;
+      background: #4c7d15;
+      font-family:"Helvetica Neue",sans-serif;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      transition: all 400ms ease-in-out;
     }
 
     .stripe2 {
@@ -562,11 +591,13 @@
       bottom: 100px;
       width: 80%;
       height: 200px;
-      background: rgba(0,80,0,0.8);
+      background: white;
       display: block;
       margin:  0 auto;
       left: 0;
       right: 0;
+      box-shadow: 0 2px 5px 1px rgba(5, 5, 5, 0.4);
+
     }
 
     .box button {
@@ -580,13 +611,14 @@
       color: white;
       text-transform: uppercase;
       font-size: 15px;
+      cursor: pointer;
     }
 
 
     .box h1 {
       font-family: "Helvetica Neue", sans-serif;
       text-transform: uppercase;
-      color: white;
+      color: black;
       font-weight: 500;
       font-size: 20px;
       margin-top: 50px;
@@ -607,16 +639,17 @@
       left:0;
       width: 100%;
       height: 40px;
-      background: rgba(0,0,0,0);
       z-index: 99;
+
       text-align: center;
       font-family: "Helvetica Neue",sans-serif;
     }
 
     .panel-message h1 {
-      background: rgba(0,0,0,0.5);
-      color: white;
+      background: white;
+      color: black;
       width: 500px;
+      box-shadow: 0 2px 5px 1px rgba(5, 5, 5, 0.4);
       display: block;
       margin: 0 auto;
       padding-bottom: 20px;
@@ -784,29 +817,109 @@
       right: 0;
       display: block;
       margin: 0 auto;
-      width:90px;
+      width:auto;
       height: 90px;
       z-index: 9999999999999999999999;
       opacity: 0;
       transition: all 300ms ease-in-out;
     }
 
+    .rotate {
+      position: absolute;
+      top:-150px;
+      left:-200px;
+      width: 200%;
+      height: 200px;
+      background: darkolivegreen;
+      transform: rotate(-20deg);
+      z-index: 0;
+    }
+
+    .bg-img {
+      position: absolute;
+      top:-10%;
+      left:0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 135%;
+      animation: zoom 25s linear forwards 1;
+    }
+
+    .bg {
+      overflow: hidden;
+      background:red;
+      position: relative;
+    }
+
+    @keyframes zoom {
+      0%{
+        transform: scale(1.5);
+      }
+      5%{
+        transform: scale(1.4)
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+
+
+    .gradient {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @keyframes move-up {
+      0%{
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+      }
+    }
+
+
+    #curtain {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    .no-stripe {
+      text-align:center !important;
+    }
+
 </style>
 
 
-<img class="nav-logo" src="https://pbs.twimg.com/profile_images/448705171556548608/iVtYqy90_400x400.jpeg"/>
+
+
+<img class="nav-logo" src="../vanmar.png"/>
 
 <div class="bg">
+  <img class="bg-img" src="../bg.jpg"/>
+  <div class="gradient"></div>
   <div class="content">
-    <img src="https://pbs.twimg.com/profile_images/448705171556548608/iVtYqy90_400x400.jpeg"/>
-    <h1>The monster of mortgage</h1>
+    <div class="rotate"></div>
+    <img src="../vanmar.png"/>
+    <h1 style="z-index: 999999999 !important;">The monster of mortgage</h1>
     <button>Let's get started</button>
   </div>
 
   <%= render 'partials/nav' %>
 </div>
 
-<div class="second-panel">
+<div style="background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(https://www.bestcatcher.com/wp-content/uploads/2016/07/Proven_Ways_to_be_Happy.jpg) center center no-repeat;  background-size:cover; background-position: -200px 0 !important;" class="second-panel first-panel">
   <div class="second-panel-content">
     <h1>First-Time Homeowner?</h1>
     <p>If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
@@ -814,27 +927,27 @@
   </div>
 
   <div class="panel light">
-    <div class="stripe ">
+    <div id="background" class="stripe ">
     </div>
   </div>
 </div>
 
 
-<div  style="background: url(../blue-bg.png) center center no-repeat;" class="second-panel">
+<div  style=" background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url(https://i.pinimg.com/originals/96/78/5a/96785a4f7affaadeeeda0ac6adc43eff.jpg) center center no-repeat; background-size:cover; " class="second-panel">
   <div class="second-panel-content panel2 mobile-change">
-    <h1 style="color:white; width: 100%; font-size: 30px;">Understand Your Rights</h1>
-    <p style="color: white">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
+    <h1 style="color:black; width: 100%; font-size: 30px;">Understand Your Rights</h1>
+    <p style="color: black">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
     <button>Contact Us With Your Questions</button>
   </div>
 
-  <div  class="panel light">
-    <div class="stripe stripe2 ">
+  <div   class="panel light">
+    <div  class="stripe stripe2 ">
     </div>
   </div>
 </div>
 
 
-<div style="background: url(../green-bg.png) center center no-repeat; background-size: cover;" class="second-panel">
+<div style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://assets1.archetypes.com/wp-content/uploads/2015/10/shutterstock_33116836-e1446571988932.jpg) center center no-repeat; background-size: cover;" class="second-panel no-stripe">
   <div class="second-panel-content mobile-change">
     <h1 style="color: white; font-size: 28px;">Down Payment Insurance</h1>
     <p style="color: white">Depending on the type of loan you are applying for, it could mean a down payment of up to 20%. Ask our staff today about our down payment assistance program.</p>
@@ -842,21 +955,21 @@
   </div>
 
   <div class="panel light">
-    <div class="stripe ">
+    <div id="background" class="stripe ">
     </div>
   </div>
 </div>
 
 
-<div  class="second-panel">
+<div style="   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn-media-1.lifehack.org/wp-content/files/2015/06/Geniuenly-Happy-People.jpg) center center no-repeat; background-size: cover;" class="second-panel no-stripe">
   <div class="second-panel-content panel2">
-    <h1>15+ Years Experience</h1>
-    <p>Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
+    <h1 style="color:white">15+ Years Experience</h1>
+    <p style="color:white">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
     <button>create an affordable plan</button>
   </div>
 
-  <div class="panel light">
-    <div class="stripe stripe2 ">
+  <div   class="panel light">
+    <div  class="stripe stripe2 ">
     </div>
   </div>
 </div>
@@ -867,25 +980,25 @@
   </div>
 
 
-  <div style="background: url(http://www.financenewspro.com/wp-content/uploads/2016/05/small-business.jpg) center center no-repeat; background-size: cover;" class="panels">
+  <div style="  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(http://www.financenewspro.com/wp-content/uploads/2016/05/small-business.jpg) center center no-repeat; background-size: cover;" class="panels">
     <div class="box mobile-box">
       <h1>Down Payment Assistance</h1>
       <button>Apply Today</button>
     </div>
   </div>
-  <div style="background: url(http://ak9.picdn.net/shutterstock/videos/3773279/thumb/10.jpg) center center no-repeat; background-size: cover;" class="panels">
+  <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(http://ak9.picdn.net/shutterstock/videos/3773279/thumb/10.jpg) center center no-repeat; background-size: cover;" class="panels">
     <div class="box">
       <h1>Down Payment Assistance</h1>
       <button>Apply Today</button>
     </div>
   </div>
-  <div style=" background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GCDU2hc/business-people-meeting-and-talking-hd-movie-1920x1080_htaxaei__F0000.png) center center no-repeat; background-size: cover;" class="panels">
+  <div style=" background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GCDU2hc/business-people-meeting-and-talking-hd-movie-1920x1080_htaxaei__F0000.png) center center no-repeat; background-size: cover;" class="panels">
     <div class="box">
       <h1>Down Payment Assistance</h1>
       <button>Apply Today</button>
     </div>
   </div>
-  <div style="background: url(http://footage.framepool.com/shotimg/qf/706817154-lecturing-ok-turning-round-full-body.jpg) center center no-repeat; background-size: cover;" class="panels">
+  <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(http://footage.framepool.com/shotimg/qf/706817154-lecturing-ok-turning-round-full-body.jpg) center center no-repeat; background-size: cover;" class="panels">
     <div class="box">
       <h1>Down Payment Assistance</h1>
       <button>Apply Today</button>
@@ -893,9 +1006,9 @@
   </div>
 </div>
 
-<div  class="footer2">
+<div style="background:rgb(60,60,60) !important;"  class="footer2">
 
-  <div class="footer-text">
+  <div style="margin-top: 50px;" class="footer-text">
     <h1>Get Peace Of Mind With <br/> Exceptional Loan Options</h1>
 
     <p>Becoming a homeowner can be exciting and stressful at the same time.
@@ -905,7 +1018,7 @@
   </div>
 
 
-  <div class="both-footer">
+  <div style="margin-top: 310px;" class="both-footer">
     <div class="left-footer-side">
       <h3>Contact Us</h3>
       <p>39249 Leopard St. Ste A <br/> Palm Desert, CA 92211</p>
@@ -963,4 +1076,72 @@
       });
 
   });
+
+
+  var vertexHeight = 15000;
+  var planeDefinition = 100;
+  var planeSize = 1245000;
+  var totalObjects = 100000;
+
+  var container = document.createElement('div');
+  document.getElementById("background").appendChild( container );
+
+  var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight,1, 400000)
+  camera.position.z = 550000;
+  camera.position.y =10000;
+  camera.lookAt( new THREE.Vector3(0,6000,0) );
+
+
+  var scene = new THREE.Scene();
+  scene.fog = new THREE.Fog( 0x002200, 1, 300000 );
+
+
+  var	plane = new THREE.Mesh( new THREE.PlaneGeometry( planeSize, planeSize, planeDefinition, planeDefinition ), new THREE.MeshBasicMaterial( { color: 0x555555, wireframe: false } ) );
+  plane.rotation.x -=Math.PI*.5;
+
+  scene.add( plane );
+
+  var geometry = new THREE.Geometry();
+
+  for (i = 0; i < totalObjects; i ++)
+  {
+      var vertex = new THREE.Vector3();
+      vertex.x = Math.random()*planeSize-(planeSize*.5);
+      vertex.y = Math.random()*100000;
+      vertex.z = Math.random()*planeSize-(planeSize*.5);
+      geometry.vertices.push( vertex );
+  }
+
+  var material = new THREE.ParticleBasicMaterial( { size: 200 });
+  var particles = new THREE.ParticleSystem( geometry, material );
+
+  scene.add( particles );
+
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  container.appendChild( renderer.domElement );
+
+  updatePlane();
+
+  function updatePlane() {
+      for (var i = 0; i < plane.geometry.vertices.length; i++)
+      {
+          plane.geometry.vertices[i].z += Math.random()*vertexHeight -vertexHeight;
+      }
+  };
+
+
+  render();
+
+  function render() {
+      requestAnimationFrame( render );
+      camera.position.z -= 150;
+      //  dateVerts();
+      renderer.render( scene, camera );
+  }
+
+
+
+
 </script>
+
