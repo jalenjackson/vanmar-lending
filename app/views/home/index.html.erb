@@ -1188,107 +1188,70 @@
   });
 
 
-  (function() {
-      var addMesh, animate, camera, clock, container, controls, draw, mesh, renderer, rotate, scene, start;
+  var vertexHeight = 15000;
+  var planeDefinition = 100;
+  var planeSize = 1245000;
+  var totalObjects = 100000;
 
-      scene = void 0;
+  var container = document.createElement('div');
+  document.getElementById("background").appendChild( container );
 
-      camera = void 0;
-
-      renderer = void 0;
-
-      container = void 0;
-
-      controls = void 0;
-
-      clock = void 0;
-
-      mesh = void 0;
-
-      rotate = true;
-
-      start = function() {
-          var ASPECT, FAR, NEAR, SCREEN_HEIGHT, SCREEN_WIDTH, VIEW_ANGLE;
-          scene = new THREE.Scene;
-          VIEW_ANGLE = 45;
-          NEAR = 0.1;
-          FAR = 10000;
-          SCREEN_WIDTH = window.innerWidth;
-          SCREEN_HEIGHT = window.innerHeight;
-          ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT;
-          camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
-          camera.position.set(477.82504298529939, -10.02121980722944, 190.02178601347767);
-          camera.rotation.set(-2.4020274682629177, 0.6097939469542306, 2.6601321578044113);
-          camera.lookAt(scene.position);
-          scene.add(camera);
-          renderer = new THREE.WebGLRenderer({
-              antialias: true,
-              alpha: true
-          });
-          renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-          container = document.getElementById('background');
-          container.appendChild(renderer.domElement);
-          clock = new THREE.Clock;
-      };
+  var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight,1, 400000)
+  camera.position.z = 550000;
+  camera.position.y =10000;
+  camera.lookAt( new THREE.Vector3(0,6000,0) );
 
 
-      var hemiLight, jsonLoader, light;
+  var scene = new THREE.Scene();
+  scene.fog = new THREE.Fog( 0x000000, 1, 300000 );
 
 
-      draw = function() {
-          light = new THREE.DirectionalLight(0x00ff00, 4);
-          light.position.set(50, 0, 500);
-          light.castShadow = true;
-          scene.add(light);
-          jsonLoader = new THREE.ObjectLoader;
-          return jsonLoader.load('../house.json', addMesh);
-      };
+  var	plane = new THREE.Mesh( new THREE.PlaneGeometry( planeSize, planeSize, planeDefinition, planeDefinition ), new THREE.MeshBasicMaterial( { color: 0x555555, wireframe: false } ) );
+  plane.rotation.x -=Math.PI*.5;
+
+  scene.add( plane );
+
+  var geometry = new THREE.Geometry();
+
+  for (i = 0; i < totalObjects; i ++)
+  {
+      var vertex = new THREE.Vector3();
+      vertex.x = Math.random()*planeSize-(planeSize*.5);
+      vertex.y = Math.random()*100000;
+      vertex.z = Math.random()*planeSize-(planeSize*.5);
+      geometry.vertices.push( vertex );
+  }
+
+  var material = new THREE.ParticleBasicMaterial( { size: 200 });
+  var particles = new THREE.ParticleSystem( geometry, material );
+
+  scene.add( particles );
+
+  var renderer = new THREE.WebGLRenderer({alpha:true});
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  container.appendChild( renderer.domElement );
+
+  updatePlane();
+
+  function updatePlane() {
+      for (var i = 0; i < plane.geometry.vertices.length; i++)
+      {
+          plane.geometry.vertices[i].z += Math.random()*vertexHeight -vertexHeight;
+      }
+  };
 
 
+  render();
 
-      var myObj;
-      addMesh = function(object) {
-
-
-          myObj = object;
-          var materialObj = new THREE.MeshNormalMaterial({
-              vertexColors: THREE.FaceColors,
-              overdraw: 0.5
-          });
-          object.traverse(function(child) {
-              if (child instanceof THREE.Mesh) {
-                  child.geometry.computeVertexNormals;
-              }
-          });
-
-          object.position.set(-100,-100,0);
-          object.rotateY(10);
-
-          // then directly add the object
-          return scene.add(object);
-      };
-
-      animate = function() {
-          requestAnimationFrame(animate);
-
-
-          myObj.rotation.y += 0.001;
-          return renderer.render(scene, camera);
-      };
+  function render() {
+      requestAnimationFrame( render );
+      camera.position.z -= 150;
+      //  dateVerts();
+      renderer.render( scene, camera );
+  }
 
 
 
-
-      start();
-      var delay = 2000; //milliseconds
-      var timeoutId;
-      var animationIsFinished = false;
-
-      draw();
-
-      animate();
-
-  }).call(this);
 
 
 
