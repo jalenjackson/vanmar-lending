@@ -604,7 +604,7 @@
       bottom: 0;
       width: 100%;
       height: 50px;
-      background: rgb(60,60,100);
+      background: #4c7d15;
       left: 0;
       border: none;
       color: white;
@@ -698,6 +698,7 @@
       background: none;
       border: 1px solid white;
       height: 50px;
+      border-radius: .2em;
     }
 
   .contact-right-side textarea {
@@ -758,8 +759,10 @@
     .right-footer-side button {
       width: 150px;
       height: 40px;
-      background: rgb(50,50,100);
+      background: #4c7d15;
       color: white;
+      margin-top: 10px;
+      border-radius: .2em;
       font-weight: bold;
       border: none;
       text-transform: uppercase;
@@ -799,8 +802,11 @@
       width: 100%;
       height: 40px;
       background: none;
-      border: 1px solid white;
-      margin-top: 5px;
+      border-radius: .2em;
+      margin-top: 10px;
+      border:none;
+      background: rgba(255,255,255,0.5);
+
       padding-left: 10px;
       font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
     }
@@ -840,7 +846,8 @@
       left:0;
       margin: 0;
       padding: 0;
-      width: 100%;
+      min-width: 100%;
+      width: auto;
       height: 135%;
       animation: zoom 25s linear forwards 1;
     }
@@ -852,10 +859,10 @@
 
     @keyframes zoom {
       0%{
-        transform: scale(1.5);
+        transform: scale(1.3);
       }
       5%{
-        transform: scale(1.4)
+        transform: scale(1.2)
       }
       100%{
         transform: scale(1);
@@ -869,6 +876,7 @@
       left:0;
       width: 100%;
       height: 100%;
+      background: rgba(0,0,0,0.5)
     }
 
     @keyframes move-up {
@@ -897,6 +905,34 @@
       text-align:center !important;
     }
 
+
+    #background {
+      background-image: radial-gradient(ellipse farthest-corner at center top, #23233f 0%, #000000 60%);
+    }
+
+
+    .no-stripe {
+      background:white;
+      text-align:center;
+      left: 0;right: 0;
+      display: block;
+      margin:0;
+      width: 500px;
+      height: 300px;
+      display: block;
+      margin:0 auto;
+      margin-top: 190px;
+      box-shadow: 0 2px 5px 1px rgba(5, 5, 5, 0.4);
+
+
+
+
+    }
+
+    .no-stripe h1 {
+      margin-top: 35px;
+    }
+
 </style>
 
 
@@ -905,7 +941,7 @@
 <img class="nav-logo" src="../vanmar.png"/>
 
 <div class="bg">
-  <img class="bg-img" src="../bg.jpg"/>
+  <img class="bg-img" src="https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR465184/file_manager/buyer%20couple%20with%20keys.jpg"/>
   <div class="gradient"></div>
   <div class="content">
     <div class="rotate"></div>
@@ -932,43 +968,28 @@
 
 
 <div  style=" background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url(https://i.pinimg.com/originals/96/78/5a/96785a4f7affaadeeeda0ac6adc43eff.jpg) center center no-repeat; background-size:cover; " class="second-panel">
-  <div class="second-panel-content panel2 mobile-change">
+  <div class="second-panel-content panel2 mobile-change no-stripe">
     <h1 style="color:black; width: 100%; font-size: 30px;">Understand Your Rights</h1>
     <p style="color: black">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
     <button>Contact Us With Your Questions</button>
   </div>
-
-  <div   class="panel light">
-    <div  class="stripe stripe2 ">
-    </div>
-  </div>
 </div>
 
 
-<div style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://assets1.archetypes.com/wp-content/uploads/2015/10/shutterstock_33116836-e1446571988932.jpg) center center no-repeat; background-size: cover;" class="second-panel no-stripe">
-  <div class="second-panel-content mobile-change">
-    <h1 style="color: white; font-size: 28px;">Down Payment Insurance</h1>
-    <p style="color: white">Depending on the type of loan you are applying for, it could mean a down payment of up to 20%. Ask our staff today about our down payment assistance program.</p>
+<div style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://assets1.archetypes.com/wp-content/uploads/2015/10/shutterstock_33116836-e1446571988932.jpg) center center no-repeat; background-size: cover;" class="second-panel">
+  <div class="second-panel-content mobile-change no-stripe">
+    <h1 style="margin-top: 35px; font-size: 28px;">Down Payment Insurance</h1>
+    <p style="margin-left: 15px;margin-right: 15px;">Depending on the type of loan you are applying for, it could mean a down payment of up to 20%. Ask our staff today about our down payment assistance program.</p>
     <button>Apply for your loan today</button>
   </div>
-
-  <div class="panel light">
-    <div id="background" class="stripe ">
-    </div>
-  </div>
 </div>
 
 
-<div style="   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn-media-1.lifehack.org/wp-content/files/2015/06/Geniuenly-Happy-People.jpg) center center no-repeat; background-size: cover;" class="second-panel no-stripe">
-  <div class="second-panel-content panel2">
-    <h1 style="color:white">15+ Years Experience</h1>
-    <p style="color:white">Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
+<div style="   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://cdn-media-1.lifehack.org/wp-content/files/2015/06/Geniuenly-Happy-People.jpg) center center no-repeat; background-size: cover;" class="second-panel ">
+  <div class="second-panel-content panel2 no-stripe">
+    <h1>15+ Years Experience</h1>
+    <p>Becoming a homeowner can mean a whole new set of rules. Understand your rights throughout the entire loan application process. You'll benefit greatly.</p>
     <button>create an affordable plan</button>
-  </div>
-
-  <div   class="panel light">
-    <div  class="stripe stripe2 ">
-    </div>
   </div>
 </div>
 
@@ -1004,7 +1025,7 @@
   </div>
 </div>
 
-<div style="background:rgb(60,60,60) !important;"  class="footer2">
+<div style=" background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://blog-cdn.static-homes.com/wp-content/uploads/sites/2/2016/07/Buying-a-Rental-Property2.jpg) center center no-repeat; background-size:cover;"  class="footer2">
 
   <div style="margin-top: 50px;" class="footer-text">
     <h1>Get Peace Of Mind With <br/> Exceptional Loan Options</h1>
@@ -1076,67 +1097,108 @@
   });
 
 
-  var vertexHeight = 15000;
-  var planeDefinition = 100;
-  var planeSize = 1245000;
-  var totalObjects = 100000;
+  (function() {
+      var addMesh, animate, camera, clock, container, controls, draw, mesh, renderer, rotate, scene, start;
 
-  var container = document.createElement('div');
-  document.getElementById("background").appendChild( container );
+      scene = void 0;
 
-  var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight,1, 400000)
-  camera.position.z = 550000;
-  camera.position.y =10000;
-  camera.lookAt( new THREE.Vector3(0,6000,0) );
+      camera = void 0;
 
+      renderer = void 0;
 
-  var scene = new THREE.Scene();
-  scene.fog = new THREE.Fog( 0x002200, 1, 300000 );
+      container = void 0;
 
+      controls = void 0;
 
-  var	plane = new THREE.Mesh( new THREE.PlaneGeometry( planeSize, planeSize, planeDefinition, planeDefinition ), new THREE.MeshBasicMaterial( { color: 0x555555, wireframe: false } ) );
-  plane.rotation.x -=Math.PI*.5;
+      clock = void 0;
 
-  scene.add( plane );
+      mesh = void 0;
 
-  var geometry = new THREE.Geometry();
+      rotate = true;
 
-  for (i = 0; i < totalObjects; i ++)
-  {
-      var vertex = new THREE.Vector3();
-      vertex.x = Math.random()*planeSize-(planeSize*.5);
-      vertex.y = Math.random()*100000;
-      vertex.z = Math.random()*planeSize-(planeSize*.5);
-      geometry.vertices.push( vertex );
-  }
-
-  var material = new THREE.ParticleBasicMaterial( { size: 200 });
-  var particles = new THREE.ParticleSystem( geometry, material );
-
-  scene.add( particles );
-
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  container.appendChild( renderer.domElement );
-
-  updatePlane();
-
-  function updatePlane() {
-      for (var i = 0; i < plane.geometry.vertices.length; i++)
-      {
-          plane.geometry.vertices[i].z += Math.random()*vertexHeight -vertexHeight;
-      }
-  };
+      start = function() {
+          var ASPECT, FAR, NEAR, SCREEN_HEIGHT, SCREEN_WIDTH, VIEW_ANGLE;
+          scene = new THREE.Scene;
+          VIEW_ANGLE = 45;
+          NEAR = 0.1;
+          FAR = 10000;
+          SCREEN_WIDTH = window.innerWidth;
+          SCREEN_HEIGHT = window.innerHeight;
+          ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT;
+          camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+          camera.position.set(477.82504298529939, -10.02121980722944, 190.02178601347767);
+          camera.rotation.set(-2.4020274682629177, 0.6097939469542306, 2.6601321578044113);
+          camera.lookAt(scene.position);
+          scene.add(camera);
+          renderer = new THREE.WebGLRenderer({
+              antialias: true,
+              alpha: true
+          });
+          renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+          container = document.getElementById('background');
+          container.appendChild(renderer.domElement);
+          clock = new THREE.Clock;
+      };
 
 
-  render();
+      var hemiLight, jsonLoader, light;
 
-  function render() {
-      requestAnimationFrame( render );
-      camera.position.z -= 150;
-      //  dateVerts();
-      renderer.render( scene, camera );
-  }
+
+      draw = function() {
+          light = new THREE.DirectionalLight(0x00ff00, 4);
+          light.position.set(50, 0, 500);
+          light.castShadow = true;
+          scene.add(light);
+          jsonLoader = new THREE.ObjectLoader;
+          return jsonLoader.load('../house.json', addMesh);
+      };
+
+
+
+      var myObj;
+      addMesh = function(object) {
+
+
+          myObj = object;
+          var materialObj = new THREE.MeshNormalMaterial({
+              vertexColors: THREE.FaceColors,
+              overdraw: 0.5
+          });
+          object.traverse(function(child) {
+              if (child instanceof THREE.Mesh) {
+                  child.geometry.computeVertexNormals;
+              }
+          });
+
+          object.position.set(-100,-100,0);
+          object.rotateY(10);
+
+          // then directly add the object
+          return scene.add(object);
+      };
+
+      animate = function() {
+          requestAnimationFrame(animate);
+
+
+          myObj.rotation.y += 0.001;
+          return renderer.render(scene, camera);
+      };
+
+
+
+
+      start();
+      var delay = 2000; //milliseconds
+      var timeoutId;
+      var animationIsFinished = false;
+
+      draw();
+
+      animate();
+
+  }).call(this);
+
 
 
 
