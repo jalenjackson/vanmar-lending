@@ -124,6 +124,7 @@
       margin: 0 auto;
       margin-top: 0px;
       transform: translateY(20px);
+      opacity:0;
     }
 
 
@@ -1146,11 +1147,16 @@
          opacity: 0
      });
 
-     $(".content h1").addClass("move-up");
+     $(".content img").addClass("move-up");
 
      setTimeout(function () {
-         $(".content button").addClass("move-up")
+         $(".content h1").addClass("move-up")
+
      },190);
+
+      setTimeout(function () {
+          $(".content button").addClass("move-up")
+      },270);
 
      $(".bg-img").addClass("bg-animation")
   });
