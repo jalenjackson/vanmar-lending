@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   get '/team' => 'team#index'
 
-  get '/startnow' => 'home#startnow'
+  get '/buy' => 'home#buy'
+  get '/refinance' => 'home#refinance'
+
 end

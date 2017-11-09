@@ -168,6 +168,7 @@
       font-size: 16px;
       font-weight: 300;
       letter-spacing: 1px;
+      margin-left: 10px;
       border: 2px solid white;
       margin-top: 30px;
       cursor: pointer;
@@ -180,7 +181,8 @@
     }
 
     .content button:hover {
-      box-shadow: 5px 7px 7px 0 rgba(0,0,0,.26);
+      background:white;
+      color:black;
     }
 
 
@@ -1079,7 +1081,8 @@
   <div class="gradient"></div>
   <div class="content">
     <h1 style="z-index: 999999999 !important;">The monster of mortgage</h1>
-    <button>Let's get started</button>
+    <button onclick="window.location.href='/buy'">Buy A Home</button>
+    <button onclick="window.location.href='/refinance'">Refinance</button>
   </div>
 
   <%= render 'partials/nav' %>

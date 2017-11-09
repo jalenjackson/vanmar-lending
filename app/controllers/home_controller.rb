@@ -3,7 +3,11 @@ class HomeController < ApplicationController
 
   end
 
-  def startnow
+  def buy
+
+  end
+
+  def refinance
 
   end
 end
