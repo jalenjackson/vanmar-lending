@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a33297a5-4c5f-4322-b77b-6285c485f2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/refinance.html.erb" afterPath="$PROJECT_DIR$/app/views/home/refinance.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -51,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="refinance.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="refinance.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/refinance.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
+            <state relative-caret-position="6400">
               <caret line="325" column="9" lean-forward="false" selection-start-line="325" selection-start-column="9" selection-end-line="325" selection-end-column="9" />
               <folding />
             </state>
@@ -71,33 +73,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/team/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16060">
-              <caret line="803" column="26" lean-forward="false" selection-start-line="803" selection-start-column="26" selection-end-line="803" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="1084" column="53" lean-forward="false" selection-start-line="1084" selection-start-column="53" selection-end-line="1084" selection-end-column="53" />
+            <state relative-caret-position="499">
+              <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,6 +158,8 @@
       <find>nav</find>
       <find>mobile-change h1</find>
       <find>hover</find>
+      <find>stripe</find>
+      <find>box-s</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,7 +173,6 @@
         <option value="$PROJECT_DIR$/app/controllers/contact_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/partials/_footer.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/controllers/team_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/contact/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/team/index.html.erb" />
@@ -177,10 +180,11 @@
         <option value="$PROJECT_DIR$/app/views/home/startnow.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/buy.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/refinance.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -677,12 +681,12 @@
       <workItem from="1509420366491" duration="14680000" />
       <workItem from="1510027730532" duration="16813000" />
       <workItem from="1510178864363" duration="1031000" />
-      <workItem from="1510185458191" duration="3769000" />
+      <workItem from="1510185458191" duration="6345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55141000" />
+    <option name="totallyTimeSpent" value="57717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -739,16 +743,16 @@
         <state relative-caret-position="15920">
           <caret line="796" column="14" lean-forward="false" selection-start-line="796" selection-start-column="0" selection-end-line="797" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -826,16 +830,16 @@
         <state relative-caret-position="220">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -920,16 +924,16 @@
         <state relative-caret-position="3020">
           <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -985,16 +989,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,14 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3860">
-          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12200">
@@ -1089,14 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_nav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1110,25 +1098,6 @@
         <state relative-caret-position="645">
           <caret line="139" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="321" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="1084" column="53" lean-forward="false" selection-start-line="1084" selection-start-column="53" selection-end-line="1084" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,9 +1119,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/refinance.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
+        <state relative-caret-position="6400">
           <caret line="325" column="9" lean-forward="false" selection-start-line="325" selection-start-column="9" selection-end-line="325" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

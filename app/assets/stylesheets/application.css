@@ -130,6 +130,7 @@ a.menu-trigger.active span:after {
     z-index: 99999999999999999999999999;
     transition: all 300ms ease-in-out;
     white-space: nowrap;
+
 }
 
 
