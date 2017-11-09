@@ -155,6 +155,20 @@ crossorigin="anonymous"></script>
       padding-top: 5px;
       z-index: 9999999999;
 
+      text-shadow:
+          0 0 2px white,
+          0 0 10px white,
+          0 0 20px #4d7e15,
+          0 0 30px #4d7e15,
+          0 0 40px #4d7e15,
+          0 0 70px #4d7e15,
+          0 0 80px #fc5931,
+          0 0 100px #fc5931;
+
+      background: -webkit-linear-gradient(white, rgba(255,255,255,0.5));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
       transform: translateY(30px);
 
 
@@ -163,7 +177,7 @@ crossorigin="anonymous"></script>
 
 
     .move-up {
-      animation: move-up 500ms ease-in-out forwards 1 300ms;
+      animation: move-up 700ms ease-in-out forwards 1 300ms;
     }
 
     .content button {
@@ -172,14 +186,13 @@ crossorigin="anonymous"></script>
       border: none;
       color: white;
       opacity: 0;
-      background: rgba(0,0,0,0.3);
+      background: #4d7e15;
       font-family:"Helvetica Neue",sans-serif;
       text-transform: uppercase;
       font-size: 16px;
       font-weight: 300;
       letter-spacing: 1px;
       margin-left: 10px;
-      border: 2px solid white;
       margin-top: 30px;
       cursor: pointer;
       transform: translateY(30px);
@@ -191,8 +204,8 @@ crossorigin="anonymous"></script>
     }
 
     .content button:hover {
-      background:white;
-      color:black;
+      box-shadow: 0 2px 5px 0 rgba(10,10,10,1);
+
     }
 
 
@@ -935,7 +948,7 @@ crossorigin="anonymous"></script>
       left:0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at center, rgba(0,0,0,0.4) 0, rgba(0,0,0,1));
+      background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0, rgba(0,0,0,1));
     }
 
     @keyframes move-up {
@@ -1064,10 +1077,13 @@ crossorigin="anonymous"></script>
     .left-logo {
       position: absolute;
       top:40px;
-      left: 50px;
+      left: 0px;
+      right: 0;
+      margin: auto;
+      background:rgba(255,255,255,0.7);
       z-index: 99999999999;
       width: auto;
-      height: 70px;
+      height: 110px;
 
     }
 
@@ -1091,8 +1107,8 @@ crossorigin="anonymous"></script>
   <div class="gradient"></div>
   <div class="content">
     <h1 style="z-index: 999999999 !important;">The monster of mortgage</h1>
-    <button style="" onclick="window.location.href='/buy'">Buy A Home</button>
-    <button style="" onclick="window.location.href='/refinance'">Refinance</button>
+    <button class="btn1" style="" onclick="window.location.href='/buy'">Buy A Home</button>
+    <button class="btn2" style="background: #ff5734 !important;" onclick="window.location.href='/refinance'">Refinance</button>
   </div>
 
   <%= render 'partials/nav' %>
@@ -1110,6 +1126,22 @@ crossorigin="anonymous"></script>
     </div>
   </div>
 </div>
+
+
+<div style="background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(https://www.bestcatcher.com/wp-content/uploads/2016/07/Proven_Ways_to_be_Happy.jpg) center center no-repeat;  background-size:cover; background-position: -200px 0 !important;" class="second-panel first-panel">
+  <div class="second-panel-content mobile-panel-content0">
+    <h1>First-Time Homeowner?</h1>
+    <p>If you are a first time homeowner you may be eligible for discounts on your rate, closing costs and PMI. Our staff can assist you in calculating your discounts </p>
+    <button>create an affordable plan</button>
+  </div>
+
+  <div class="panel light">
+    <div  class="stripe ">
+    </div>
+  </div>
+</div>
+
+
 
 
 <div  style="background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url(https://i.pinimg.com/originals/96/78/5a/96785a4f7affaadeeeda0ac6adc43eff.jpg) center center no-repeat; background-size:cover; " class="second-panel">
@@ -1222,8 +1254,12 @@ crossorigin="anonymous"></script>
      },190);
 
       setTimeout(function () {
-          $(".content button").addClass("move-up")
+          $(".btn1").addClass("move-up")
       },570);
+
+      setTimeout(function () {
+          $(".btn2").addClass("move-up")
+      },770);
 
      $(".bg-img").addClass("bg-animation")
   });
